@@ -1,4 +1,6 @@
 import hamburgerMenu from "./menu";
+import contactPage from "./contact";
+
 
 // header
 const content = document.querySelector('#content');
@@ -15,6 +17,7 @@ const header =
         <li><a href="#menu">Menu</a></li>
         <li><a href="#drinks">Drinks</a></li>
         <li><a href="#why_choose_us">Why Choose Us?</a></li>
+        <li><button id="contact">Contact</button></li>
     </ul>
     
     <ul id="navbar2">
@@ -22,6 +25,7 @@ const header =
         <li><a href="#menu" class="nav-link">Menu</a></li>
         <li><a href="#drinks" class="nav-link">Drinks</a></li>
         <li><a href="#why_choose_us" class="nav-link">Why Choose Us</a></li>
+        <li><button id="contact" class="nav-link">Contact</button></li>
     </ul>
     <button id="menu-btn" aria-label="menu" aria-haspopup="true" aria-expanded="false">
         <svg
@@ -64,7 +68,7 @@ const home =
 </figure>
 </section>`
 
-content.insertAdjacentHTML('beforeend', home)
+content.insertAdjacentHTML('beforeend', home);
 
 // menu section
 const menu =
@@ -399,4 +403,12 @@ const footer =
 content.insertAdjacentHTML('beforeend', footer);
 
 // invoke mobile menu
-hamburgerMenu()
+hamburgerMenu();
+
+// invoke contact page
+const createContact = document.getElementById('contact');
+createContact.addEventListener('click', () => {
+    content.textContent = '';
+    contactPage();
+});
+
