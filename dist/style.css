@@ -79,7 +79,6 @@ section h2 {
 }
 
 
-#navbar2,
 #menu-btn {
     display: none;
 }
@@ -100,11 +99,22 @@ body {
     border: 1px solid var(--primary-color);
     cursor: pointer;
     transition: var(--transition);
+    font-weight: bold;
 }
 
 .btn:hover {
     background-color: black;
     color: var(--primary-color);
+}
+
+#contact {
+    display: block;
+    padding: 5px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 /* END OF GENERAL STYLING */
@@ -253,15 +263,7 @@ h3 {
 }
 
 /* END OF WHY CHOOSE US STYLING */
-#contact {
-    display: block;
-    padding: 5px 20px;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border: 1px solid var(--secondary-color);
-    cursor: pointer;
-    transition: var(--transition);
-}
+
 
 footer {
     background-color: var(--primary-color);
@@ -277,23 +279,6 @@ footer a:hover {
     color: var(--tertiary-color);
 }
 
-.footer-column {
-    padding: 1.25rem;
-    min-width: 12.5rem;
-}
-
-.footer-column svg {
-    height: 1em;
-    width: 1em;
-    top: .125em;
-    position: relative;
-}
-
-section[id="footer-main"] {
-    padding: 1.25rem 1.875rem;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 h2[class="footer-title"] {
     color: var(--secondary-color);
@@ -390,10 +375,6 @@ ul[class="footer-legal-items"] li {
     }
 
     #navbar {
-        display: none;
-    }
-
-    #navbar2 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -410,12 +391,12 @@ ul[class="footer-legal-items"] li {
         transition: var(--transition);
     }
 
-    #navbar2 li {
+    #navbar li {
         width: 100%;
         margin: 2rem 0;
     }
 
-    #navbar2 li a {
+    #navbar li a {
         color: var(--secondary-color);
         line-height: 1;
         font-size: 13px;
@@ -425,19 +406,15 @@ ul[class="footer-legal-items"] li {
         align-items: center;
         height: 25px;
         padding: 0 5px;
-        outline: none;
+        outline: none
     }
 
-    #navbar2 #contact {
-        margin: 0 auto;
-    }
-
-    #navbar2 a:hover {
+    #navbar a:hover {
         background-color: var(--primary-color);
         color: var(--secondary-color);
     }
 
-    #navbar2.active {
+    #navbar.active {
         left: 0;
     }
 
@@ -448,10 +425,12 @@ ul[class="footer-legal-items"] li {
         margin: 0.5rem 1rem;
     }
 
-    #menu-btn,
-    nav svg,
-    #navbar2 svg {
+    #menu-btn {
         display: initial;
+    }
+
+    #contact {
+        margin: 0 auto;
     }
 
     /*END OF HAMBURGER MENU */
@@ -476,6 +455,7 @@ ul[class="footer-legal-items"] li {
 }
 
 /* END OF MEDIA QUERIES FOR PHONES */
+
 section[class="contact"] {
     background-color: var(--secondary-color);
 }
@@ -485,7 +465,8 @@ section[class="contact"] .container {
     gap: 2rem;
     grid-template-columns: minmax(min-content, 1fr);
     place-items: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
+
 }
 
 form[action="contact-form"] {
@@ -517,7 +498,8 @@ legend {
 }
 
 input,
-textarea , input[type="email"] {
+textarea,
+#email {
     border-bottom: 2px solid var(--primary-color);
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -556,4 +538,3 @@ textarea:focus-visible {
 }
 
 /* end of contact page styling */
-
