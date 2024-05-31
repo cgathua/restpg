@@ -179,7 +179,7 @@ section[class="hero"] {
 
 section[id="menu"] .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
     gap: 1rem;
     align-items: center;
 }
@@ -436,7 +436,7 @@ ul[class="footer-legal-items"] li {
     /*END OF HAMBURGER MENU */
 
     section[id="menu"] .container {
-        grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
         align-items: center;
     }
 }
@@ -449,7 +449,7 @@ ul[class="footer-legal-items"] li {
     }
 
     section[id="menu"] .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(min-content, 1fr);
         align-items: center;
     }
 }
