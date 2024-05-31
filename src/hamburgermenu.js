@@ -11,9 +11,9 @@ function hamburgerMenu() {
         li.addEventListener('click', () => {
             menuBtn.classList.remove('active');
             navMenu.classList.remove('active');
-        })
-    })
+        });
+    });
 
-}
+};
 
 export default hamburgerMenu;

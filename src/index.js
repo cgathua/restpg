@@ -22,7 +22,7 @@ homeSection.addEventListener('click', function () {
     const content = document.getElementById('content');
     content.textContent = "";
     homePage();
-})
+});
 
 // menu page event listener
 const menuSection = document.getElementById('menu');
@@ -60,3 +60,8 @@ contact.addEventListener('click', function () {
 
 // invoke mobile menu
 hamburgerMenu();
+
+// ask user if they want to reload page
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+});
